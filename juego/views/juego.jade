@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  head
+      title Circles
+      
+	body
+	  #menu.hidden
+	      h1 Circles
+	      p.b(onclick='newGame()') &iexcl;Jugar!
+	      p.b(onclick='showHelp()') &iquest;C&oacute;mo le hago?
+	      p#m_hs.p
+	    #help.hidden(onclick='hideHelp()')
+	      h1 Ball it as
+	      p
+	         Cada nivel se a&ntilde;ade un nuevo c&iacute;rculo, toca ese c&iacute;rculo para pasar de nivel, si tocas uno incorrecto el juego termina.
+	      p.p Toca para continuar
+	    #score.hidden(onclick='nextLevel()')
+	      h1#curscore
+	      p#s_hs
+	      p.p Toca para continuar
+	    #lose.hidden
+	      h1 Perdiste
+	      p Puntuaci&oacute;n:
+	      h1#lose_score
+	      p.p.u(onclick='newGame()') Nuevo Juego
+	      div(onclick='toMenu()') Men&uacute;
+	    #game
+
+
